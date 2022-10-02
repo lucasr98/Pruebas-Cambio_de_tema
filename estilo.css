@@ -1,0 +1,167 @@
+*{
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+}
+
+:root{
+	--color1: #394A54;
+	--color2: #FFD100;
+}
+
+body{
+	background-color: var(--color1);
+}
+
+a{
+	user-select: none;
+}
+
+.logo-container{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	gap: 18px;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, .25);
+	transition: background-color, .3s ease-in-out;
+}
+
+.logo{
+	position: relative;
+	width: 200px;
+	height: 200px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--color1);
+	border-radius: 100%;
+	user-select: none;
+	cursor: pointer;
+	box-shadow: 0 0 10px 5px rgba(0, 0, 0, .25);
+}
+
+.vector{
+	position: absolute;
+	filter: invert(69%) sepia(100%) saturate(737%) hue-rotate(360deg) brightness(105%) contrast(103%);
+	width: 60%;
+	height: 60%;
+}
+
+.text_container{
+	background-color: var(--color1);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 18px;
+	border-radius: 36px;
+	transition: background-color, scale, .3s ease-in-out;
+	box-shadow: 0 0 10px 5px rgba(0, 0, 0, .25);
+	transition: background-color, .3s ease-in-out;
+}
+
+.text_container_2{
+	background-color: var(--color2);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 18px;
+	border-radius: 36px;
+	transition: background-color, scale, .3s ease-in-out;
+	box-shadow: 0 0 10px 5px rgba(0, 0, 0, .25);
+	transition: background-color, .3s ease-in-out;
+}
+
+.text{
+	font-family: sans-serif;
+	font-size: 18px;
+	color: var(--color2);
+	transition: color, .3s ease-in-out;
+}
+
+.text_2{
+	font-family: sans-serif;
+	font-size: 18px;
+	color: var(--color1);
+	transition: color, .3s ease-in-out;
+}
+
+.text_container:hover{
+	background-color: var(--color2);
+	transform: scale(1.05);
+}
+
+.text_container:hover > .text{
+	color: var(--color1);
+}
+
+.text_container_2:hover{
+	background-color: var(--color1);
+	transform: scale(1.05);
+}
+
+.text_container_2:hover > .text_2{
+	color: var(--color2);
+}
+
+.switch{
+	background-color: rgba(225, 225, 225, 1.0);
+	display: flex;
+	align-items: center;
+	justify-content: right;
+	position: absolute;
+	top: 36px;
+	right: 36px;
+	width: 45px;
+	height: 30px;
+	border-radius: 30px;
+	cursor: pointer;
+	transition: background-color .2s ease-in-out;
+}
+
+.control{
+	background-color: rgba(225, 225, 225, 1.0);
+	box-shadow: 0 0 3px 3px rgba(0, 0, 0, .25);
+	width: 30px;
+	height: 30px;
+	border-radius: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: background-color .2s ease-in-out;
+}
+
+#sun{
+	display: none;
+	justify-content: center;
+	align-items: center;
+}
+
+#sun i{
+	margin: auto;
+	font-size: 21px;
+	color: rgba(255, 255, 255, .5);
+	transition: color, .2s ease-in-out;
+}
+
+#sun i:hover{
+	color: var(--color2);
+}
+
+#moon{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#moon i{
+	margin: auto;
+	font-size: 21px;
+	color: rgba(0, 0, 0, .5);
+	transition: color, .2s ease-in-out;
+}
+
+#moon i:hover{
+	color: var(--color1);
+}
